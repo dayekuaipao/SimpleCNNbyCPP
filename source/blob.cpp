@@ -107,6 +107,7 @@ Blob3d imread(const char* path)
 			}
 		}	
 	}
+	stbi_image_free(image);
 	return img;
 }
 
