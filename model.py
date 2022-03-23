@@ -1,3 +1,4 @@
+from tabnanny import verbose
 import torch
 import torch.nn as nn
 
@@ -211,7 +212,7 @@ if __name__ == '__main__':
 
     # init and load net
     net = SimpleCLS()
-    state_dict = torch.load('./weights/face_binary_cls.pth')
+    state_dict = torch.load('./weights/face_binary_cls.pth',map_location=torch.device('cpu'))
     net.load_state_dict(state_dict)
     net.eval()
 
